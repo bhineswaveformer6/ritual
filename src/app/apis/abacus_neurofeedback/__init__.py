@@ -19,7 +19,7 @@ class PredictionResponse(BaseModel):
 @router.post("/neurofeedback", response_model=PredictionResponse)
 async def get_neurofeedback(input: EEGInput):
     try:
-        api_key = "s2_0eddb08477204f8d80420d6cafd2a7ba"  # From Settings > API Keys
+        api_key = "s2_0eddb08477204f8d80420d6cafd2a7ba"  # From Abacus.AI: Settings > API Keys
         deployment_token = "67c53e635fa14ed4b1a975275f976fbc"  # From Deployments
         if not api_key or not deployment_token:
             raise HTTPException(status_code=500, detail="Missing Abacus.AI secrets")
@@ -48,8 +48,8 @@ async def get_neurofeedback(input: EEGInput):
         if response.status_code != 200:
             raise HTTPException(status_code=response.status_code, detail=response.text)
         result = response.json()
-        # Adjust based on actual response format
-        prediction = result.get("response", "No prediction returned")
+        # Adjust based on actual response (e.g., {'feedback': 'High beta...'})
+        prediction = result.get("feedback", "No prediction returned")
         return PredictionResponse(response=prediction, latency=latency)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
