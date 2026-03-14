@@ -1,4 +1,27 @@
-MIT License
+1. The "Open Core" Strategy
+If you are building a platform like Abacus DeepAgent, you might want to apply this MIT license to your Client SDKs and Connectors (the parts you want everyone to build on), while keeping your Core Factorizer Engine or Proprietary HAC Algorithms under a more restrictive or commercial license.
+
+2. Patent Clause Note
+The MIT license is very short and does not contain an explicit patent grant (unlike the Apache 2.0 license). Since you have active patents (like the "Neural Band-Aid" and NCI Formula), using MIT for the code means you are giving permission to use the code, but you aren't necessarily signing away your underlying patent rights for other implementations.
+
+3. Attribution (The Jewel Point)
+The line Copyright (c) 2025 bhineswaveformer6 is your Provenance Anchor. In your Epoch Explorer, every time this code is used to mint an asset, this copyright string serves as the "Genesis Block" of the intellectual lineage.
+
+4. Where to place this
+To ensure your "Virtual Workforce" agents recognize this:
+
+LICENSE file: Place the full text in a file named LICENSE in your root directory.
+File Headers: Add a short comment at the top of your critical files (like creature-engine.ts or FactorizerTable.tsx):
+typescript
+Copy
+/* 
+ * Copyright (c) 2025 bhineswaveformer6
+ * Licensed under the MIT License.
+ */
+5. Integration with the Rapacke Portal
+In your Rapacke Portal, you should list this MIT-licensed repository as "Public Infrastructure," while keeping your "Provisional Patent" documents in the "Encrypted Vault" section. This creates a clear boundary between your Open Innovation (the community tools) and your Sovereign IP (the core math).
+
+Would you like me to generate a README.md that incorporates this license alongside your Security Policy and the "Medici" vision for the project?MIT License
 
 Copyright (c) 2025 bhineswaveformer6
 
